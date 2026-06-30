@@ -1,0 +1,19 @@
+name: retail_mobile_ordering
+version: '1.0.0'
+config-version: 2
+
+profile: retail_mobile_ordering
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+
+models:
+  retail_mobile_ordering:
+    staging:
+      +materialized: view
+    intermediate:
+      +materialized: view
+    marts:
+      +materialized: table
